@@ -13,7 +13,9 @@ public class Client {
             InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
 //            System.out.println((char) inputStreamReader.read() );
             BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
-            System.out.println(bufferedReader.readLine());
+            while (true){
+                System.out.println(bufferedReader.readLine());
+            }
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

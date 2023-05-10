@@ -18,11 +18,13 @@ public class Server {
             PrintWriter printWriter = new PrintWriter(outputStream,true);
             System.out.print("Enter a string: ");
             inputobj = new Scanner(System.in);
-            String inp = inputobj.nextLine();
+            while (true){
+                String inp = inputobj.nextLine();
+                printWriter.println(inp);
+            }
 
-            printWriter.println(inp);
 
-            System.out.println("Client Connected.");
+//            System.out.println("Client Connected.");
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
